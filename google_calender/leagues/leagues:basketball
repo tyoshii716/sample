@@ -1,0 +1,77 @@
+[
+   {
+      "did" : "teams:nba:National Basketball Association - NBA",
+      "type" : "directory",
+      "title" : "National Basketball Association - NBA"
+   },
+   {
+      "did" : "teams:wnbl:Australian Women's National Basketball League - WNBL",
+      "type" : "directory",
+      "title" : "Australian Women's National Basketball League - WNBL"
+   },
+   {
+      "did" : "teams:uleb:Basketball Eurocup - ULEB",
+      "type" : "directory",
+      "title" : "Basketball Eurocup - ULEB"
+   },
+   {
+      "did" : "teams:cba:Continental Basketball Association - CBA",
+      "type" : "directory",
+      "title" : "Continental Basketball Association - CBA"
+   },
+   {
+      "did" : "teams:mfiba_champ:FIBA World Championship (Men) - MFIBA_CHAMP",
+      "type" : "directory",
+      "title" : "FIBA World Championship (Men) - MFIBA_CHAMP"
+   },
+   {
+      "did" : "teams:itla1:Italy A1 Basketball League - ITLA1",
+      "type" : "directory",
+      "title" : "Italy A1 Basketball League - ITLA1"
+   },
+   {
+      "did" : "teams:nbdl:NBA D-League - NBDL",
+      "type" : "directory",
+      "title" : "NBA D-League - NBDL"
+   },
+   {
+      "did" : "teams:ncaab:NCAA Men's Basketball - NCAAB",
+      "type" : "directory",
+      "title" : "NCAA Men's Basketball - NCAAB"
+   },
+   {
+      "did" : "teams:ncaawb:NCAA Women's Basketball - NCAAWB",
+      "type" : "directory",
+      "title" : "NCAA Women's Basketball - NCAAWB"
+   },
+   {
+      "did" : "teams:pba:Philippine Basketball Cup - PBA",
+      "type" : "directory",
+      "title" : "Philippine Basketball Cup - PBA"
+   },
+   {
+      "did" : "teams:pfc:Philippine Fiesta Conference - PFC",
+      "type" : "directory",
+      "title" : "Philippine Fiesta Conference - PFC"
+   },
+   {
+      "did" : "teams:acb:Spanish Basketball League - ACB",
+      "type" : "directory",
+      "title" : "Spanish Basketball League - ACB"
+   },
+   {
+      "did" : "teams:sbl:Taiwanese Super Basketball League - SBL",
+      "type" : "directory",
+      "title" : "Taiwanese Super Basketball League - SBL"
+   },
+   {
+      "did" : "teams:tbl:Turkey National BK League - TBL",
+      "type" : "directory",
+      "title" : "Turkey National BK League - TBL"
+   },
+   {
+      "did" : "teams:wnba:Women's National Basketball Association - WNBA",
+      "type" : "directory",
+      "title" : "Women's National Basketball Association - WNBA"
+   }
+]

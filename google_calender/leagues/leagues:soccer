@@ -1,0 +1,487 @@
+[
+   {
+      "did" : "teams:epl:English Premier League",
+      "type" : "directory",
+      "title" : "English Premier League"
+   },
+   {
+      "did" : "teams:spa:Spanish Primera Division",
+      "type" : "directory",
+      "title" : "Spanish Primera Division"
+   },
+   {
+      "did" : "teams:aff:ASEAN Football Championship",
+      "type" : "directory",
+      "title" : "ASEAN Football Championship"
+   },
+   {
+      "did" : "teams:arge:Argentina Primera Division",
+      "type" : "directory",
+      "title" : "Argentina Primera Division"
+   },
+   {
+      "did" : "teams:aut:Austrian First Division",
+      "type" : "directory",
+      "title" : "Austrian First Division"
+   },
+   {
+      "did" : "teams:aut2:Austrian Second Division",
+      "type" : "directory",
+      "title" : "Austrian Second Division"
+   },
+   {
+      "did" : "teams:belg2:Belgian 2nd Division",
+      "type" : "directory",
+      "title" : "Belgian 2nd Division"
+   },
+   {
+      "did" : "teams:belgcup:Belgian Cup",
+      "type" : "directory",
+      "title" : "Belgian Cup"
+   },
+   {
+      "did" : "teams:belg:Belgian Jupiler Pro League",
+      "type" : "directory",
+      "title" : "Belgian Jupiler Pro League"
+   },
+   {
+      "did" : "teams:brazcc:Brazil Campeonato Carioca",
+      "type" : "directory",
+      "title" : "Brazil Campeonato Carioca"
+   },
+   {
+      "did" : "teams:brazcp:Brazil Campeonato Paulista",
+      "type" : "directory",
+      "title" : "Brazil Campeonato Paulista"
+   },
+   {
+      "did" : "teams:brazcup:Brazil Copa de Brasil",
+      "type" : "directory",
+      "title" : "Brazil Copa de Brasil"
+   },
+   {
+      "did" : "teams:braz:Brazilian Serie A",
+      "type" : "directory",
+      "title" : "Brazilian Serie A"
+   },
+   {
+      "did" : "teams:bulg:Bulgarian A Professional Football Group",
+      "type" : "directory",
+      "title" : "Bulgarian A Professional Football Group"
+   },
+   {
+      "did" : "teams:gold:CONCACAF Gold Cup",
+      "type" : "directory",
+      "title" : "CONCACAF Gold Cup"
+   },
+   {
+      "did" : "teams:chlg:Champions League",
+      "type" : "directory",
+      "title" : "Champions League"
+   },
+   {
+      "did" : "teams:chil:Chilean Primera Division",
+      "type" : "directory",
+      "title" : "Chilean Primera Division"
+   },
+   {
+      "did" : "teams:chin:Chinese Super League",
+      "type" : "directory",
+      "title" : "Chinese Super League"
+   },
+   {
+      "did" : "teams:col:Colombia Copa Mustang",
+      "type" : "directory",
+      "title" : "Colombia Copa Mustang"
+   },
+   {
+      "did" : "teams:copa:Copa America",
+      "type" : "directory",
+      "title" : "Copa America"
+   },
+   {
+      "did" : "teams:lib:Copa Libertadores",
+      "type" : "directory",
+      "title" : "Copa Libertadores"
+   },
+   {
+      "did" : "teams:sud:Copa Sudamericana",
+      "type" : "directory",
+      "title" : "Copa Sudamericana"
+   },
+   {
+      "did" : "teams:spacup:Copa del Rey",
+      "type" : "directory",
+      "title" : "Copa del Rey"
+   },
+   {
+      "did" : "teams:itacup:Coppa Italia",
+      "type" : "directory",
+      "title" : "Coppa Italia"
+   },
+   {
+      "did" : "teams:crc:Costa Rican Primera Division ",
+      "type" : "directory",
+      "title" : "Costa Rican Primera Division "
+   },
+   {
+      "did" : "teams:croacup:Croatian Hrvatski Nogometni ",
+      "type" : "directory",
+      "title" : "Croatian Hrvatski Nogometni "
+   },
+   {
+      "did" : "teams:czeccup:Czech Cup",
+      "type" : "directory",
+      "title" : "Czech Cup"
+   },
+   {
+      "did" : "teams:czec:Czech Gambrinus Liga",
+      "type" : "directory",
+      "title" : "Czech Gambrinus Liga"
+   },
+   {
+      "did" : "teams:den:Danish Superliga ",
+      "type" : "directory",
+      "title" : "Danish Superliga "
+   },
+   {
+      "did" : "teams:holl:Dutch Eredivisie",
+      "type" : "directory",
+      "title" : "Dutch Eredivisie"
+   },
+   {
+      "did" : "teams:holl2:Dutch GG Divisie",
+      "type" : "directory",
+      "title" : "Dutch GG Divisie"
+   },
+   {
+      "did" : "teams:hollknvb:Dutch KNVB Cup",
+      "type" : "directory",
+      "title" : "Dutch KNVB Cup"
+   },
+   {
+      "did" : "teams:ecu:Ecuador 1",
+      "type" : "directory",
+      "title" : "Ecuador 1"
+   },
+   {
+      "did" : "teams:engch:English Championship League",
+      "type" : "directory",
+      "title" : "English Championship League"
+   },
+   {
+      "did" : "teams:engfa:English FA Cup",
+      "type" : "directory",
+      "title" : "English FA Cup"
+   },
+   {
+      "did" : "teams:englgcup:English League Cup",
+      "type" : "directory",
+      "title" : "English League Cup"
+   },
+   {
+      "did" : "teams:engd1:English League One",
+      "type" : "directory",
+      "title" : "English League One"
+   },
+   {
+      "did" : "teams:elt:English League Trophy",
+      "type" : "directory",
+      "title" : "English League Trophy"
+   },
+   {
+      "did" : "teams:engd2:English League Two",
+      "type" : "directory",
+      "title" : "English League Two"
+   },
+   {
+      "did" : "teams:finl:Finland Veikausliga",
+      "type" : "directory",
+      "title" : "Finland Veikausliga"
+   },
+   {
+      "did" : "teams:finl2:Finland Ykkonen 2nd Division",
+      "type" : "directory",
+      "title" : "Finland Ykkonen 2nd Division"
+   },
+   {
+      "did" : "teams:fra2:France Ligue 2",
+      "type" : "directory",
+      "title" : "France Ligue 2"
+   },
+   {
+      "did" : "teams:francup:French Cup",
+      "type" : "directory",
+      "title" : "French Cup"
+   },
+   {
+      "did" : "teams:fra:French Ligue 1",
+      "type" : "directory",
+      "title" : "French Ligue 1"
+   },
+   {
+      "did" : "teams:bund:German Bundesliga",
+      "type" : "directory",
+      "title" : "German Bundesliga"
+   },
+   {
+      "did" : "teams:bund2:German Bundesliga 2",
+      "type" : "directory",
+      "title" : "German Bundesliga 2"
+   },
+   {
+      "did" : "teams:gerdfb:German DFB Pokal",
+      "type" : "directory",
+      "title" : "German DFB Pokal"
+   },
+   {
+      "did" : "teams:greecup:Greece Cup",
+      "type" : "directory",
+      "title" : "Greece Cup"
+   },
+   {
+      "did" : "teams:hungcup:Hungary Magyar Kupa",
+      "type" : "directory",
+      "title" : "Hungary Magyar Kupa"
+   },
+   {
+      "did" : "teams:aust:Hyundai A-League",
+      "type" : "directory",
+      "title" : "Hyundai A-League"
+   },
+   {
+      "did" : "teams:irel:Irish Carnegie Premier",
+      "type" : "directory",
+      "title" : "Irish Carnegie Premier"
+   },
+   {
+      "did" : "teams:isrl:Israeli Premier League",
+      "type" : "directory",
+      "title" : "Israeli Premier League"
+   },
+   {
+      "did" : "teams:jlg:J.League",
+      "type" : "directory",
+      "title" : "J.League"
+   },
+   {
+      "did" : "teams:jlg2:J2-League",
+      "type" : "directory",
+      "title" : "J2-League"
+   },
+   {
+      "did" : "teams:korfa:Korean FA Cup",
+      "type" : "directory",
+      "title" : "Korean FA Cup"
+   },
+   {
+      "did" : "teams:kor:Korean K-League",
+      "type" : "directory",
+      "title" : "Korean K-League"
+   },
+   {
+      "did" : "teams:latv:Latvian Higher League",
+      "type" : "directory",
+      "title" : "Latvian Higher League"
+   },
+   {
+      "did" : "teams:mac:Macedonian Prva Liga",
+      "type" : "directory",
+      "title" : "Macedonian Prva Liga"
+   },
+   {
+      "did" : "teams:mls:Major League Soccer",
+      "type" : "directory",
+      "title" : "Major League Soccer"
+   },
+   {
+      "did" : "teams:mpl:Malaysian Premier League",
+      "type" : "directory",
+      "title" : "Malaysian Premier League"
+   },
+   {
+      "did" : "teams:msl:Malaysian Super League",
+      "type" : "directory",
+      "title" : "Malaysian Super League"
+   },
+   {
+      "did" : "teams:natl_frnd:Men's National Friendly Games",
+      "type" : "directory",
+      "title" : "Men's National Friendly Games"
+   },
+   {
+      "did" : "teams:natl_conf:Mens National Teams Confederations Cup",
+      "type" : "directory",
+      "title" : "Mens National Teams Confederations Cup"
+   },
+   {
+      "did" : "teams:fmf:Mexican Premier Division",
+      "type" : "directory",
+      "title" : "Mexican Premier Division"
+   },
+   {
+      "did" : "teams:na_superliga:North American SuperLiga",
+      "type" : "directory",
+      "title" : "North American SuperLiga"
+   },
+   {
+      "did" : "teams:nor:Norwegian Premier League",
+      "type" : "directory",
+      "title" : "Norwegian Premier League"
+   },
+   {
+      "did" : "teams:peru:Peru Primera Division",
+      "type" : "directory",
+      "title" : "Peru Primera Division"
+   },
+   {
+      "did" : "teams:pol2:Poland II Liga",
+      "type" : "directory",
+      "title" : "Poland II Liga"
+   },
+   {
+      "did" : "teams:polcup:Polish Cup",
+      "type" : "directory",
+      "title" : "Polish Cup"
+   },
+   {
+      "did" : "teams:pola:Polish Ekstraklasa",
+      "type" : "directory",
+      "title" : "Polish Ekstraklasa"
+   },
+   {
+      "did" : "teams:port:Portuguese Liga",
+      "type" : "directory",
+      "title" : "Portuguese Liga"
+   },
+   {
+      "did" : "teams:portcup:Portuguese Taca de Liga",
+      "type" : "directory",
+      "title" : "Portuguese Taca de Liga"
+   },
+   {
+      "did" : "teams:port_tdp:Portuguese Taca de Portugal",
+      "type" : "directory",
+      "title" : "Portuguese Taca de Portugal"
+   },
+   {
+      "did" : "teams:russ:Russian Premier League",
+      "type" : "directory",
+      "title" : "Russian Premier League"
+   },
+   {
+      "did" : "teams:scot1:Scotland Division 1",
+      "type" : "directory",
+      "title" : "Scotland Division 1"
+   },
+   {
+      "did" : "teams:scot2:Scotland Division 2",
+      "type" : "directory",
+      "title" : "Scotland Division 2"
+   },
+   {
+      "did" : "teams:scot3:Scotland Division 3",
+      "type" : "directory",
+      "title" : "Scotland Division 3"
+   },
+   {
+      "did" : "teams:scofa:Scottish FA Cup",
+      "type" : "directory",
+      "title" : "Scottish FA Cup"
+   },
+   {
+      "did" : "teams:scolg:Scottish League Cup",
+      "type" : "directory",
+      "title" : "Scottish League Cup"
+   },
+   {
+      "did" : "teams:scopl:Scottish Premier League",
+      "type" : "directory",
+      "title" : "Scottish Premier League"
+   },
+   {
+      "did" : "teams:ita:Serie A",
+      "type" : "directory",
+      "title" : "Serie A"
+   },
+   {
+      "did" : "teams:singcup:Singapore Cup",
+      "type" : "directory",
+      "title" : "Singapore Cup"
+   },
+   {
+      "did" : "teams:sing:Singapore S. League",
+      "type" : "directory",
+      "title" : "Singapore S. League"
+   },
+   {
+      "did" : "teams:safr:South African Premier Soccer League",
+      "type" : "directory",
+      "title" : "South African Premier Soccer League"
+   },
+   {
+      "did" : "teams:spa2:Spanish Second Division",
+      "type" : "directory",
+      "title" : "Spanish Second Division"
+   },
+   {
+      "did" : "teams:gree:Super League Greece",
+      "type" : "directory",
+      "title" : "Super League Greece"
+   },
+   {
+      "did" : "teams:swed:Swedish Allsvenskan",
+      "type" : "directory",
+      "title" : "Swedish Allsvenskan"
+   },
+   {
+      "did" : "teams:turk:Turkish Super League",
+      "type" : "directory",
+      "title" : "Turkish Super League"
+   },
+   {
+      "did" : "teams:uefacup:UEFA Cup",
+      "type" : "directory",
+      "title" : "UEFA Cup"
+   },
+   {
+      "did" : "teams:wps:Womens Professional Soccer",
+      "type" : "directory",
+      "title" : "Womens Professional Soccer"
+   },
+   {
+      "did" : "teams:fifa_wcup:World Cup",
+      "type" : "directory",
+      "title" : "World Cup"
+   },
+   {
+      "did" : "teams:wcq_afr:World Cup Qualifiers Africa",
+      "type" : "directory",
+      "title" : "World Cup Qualifiers Africa"
+   },
+   {
+      "did" : "teams:wcq_asia:World Cup Qualifiers Asia",
+      "type" : "directory",
+      "title" : "World Cup Qualifiers Asia"
+   },
+   {
+      "did" : "teams:wcq_eur:World Cup Qualifiers Europe",
+      "type" : "directory",
+      "title" : "World Cup Qualifiers Europe"
+   },
+   {
+      "did" : "teams:wcq_concacaf:World Cup Qualifiers North/Central America and Caribbean",
+      "type" : "directory",
+      "title" : "World Cup Qualifiers North/Central America and Caribbean"
+   },
+   {
+      "did" : "teams:wcq_oce:World Cup Qualifiers Oceania",
+      "type" : "directory",
+      "title" : "World Cup Qualifiers Oceania"
+   },
+   {
+      "did" : "teams:wcq_sam:World Cup Qualifiers South America",
+      "type" : "directory",
+      "title" : "World Cup Qualifiers South America"
+   }
+]

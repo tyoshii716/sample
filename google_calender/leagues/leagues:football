@@ -1,0 +1,17 @@
+[
+   {
+      "did" : "teams:nfl:National Football League - NFL",
+      "type" : "directory",
+      "title" : "National Football League - NFL"
+   },
+   {
+      "did" : "teams:cfl:Canadian Football League - CFL",
+      "type" : "directory",
+      "title" : "Canadian Football League - CFL"
+   },
+   {
+      "did" : "teams:ncaaf:NCAA Football - NCAAF",
+      "type" : "directory",
+      "title" : "NCAA Football - NCAAF"
+   }
+]

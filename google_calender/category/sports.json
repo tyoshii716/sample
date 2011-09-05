@@ -1,0 +1,37 @@
+[
+   {
+      "did" : "leagues:cricket",
+      "type" : "directory",
+      "title" : "クリケット"
+   },
+   {
+      "did" : "leagues:soccer",
+      "type" : "directory",
+      "title" : "サッカー"
+   },
+   {
+      "did" : "leagues:basketball",
+      "type" : "directory",
+      "title" : "バスケットボール"
+   },
+   {
+      "did" : "leagues:football",
+      "type" : "directory",
+      "title" : "フットボール"
+   },
+   {
+      "did" : "leagues:hockey",
+      "type" : "directory",
+      "title" : "ホッケー"
+   },
+   {
+      "did" : "leagues:rugby",
+      "type" : "directory",
+      "title" : "ラグビー"
+   },
+   {
+      "did" : "leagues:baseball",
+      "type" : "directory",
+      "title" : "野球"
+   }
+]
