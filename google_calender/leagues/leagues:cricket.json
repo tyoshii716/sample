@@ -1,0 +1,32 @@
+[
+   {
+      "did" : "teams:icc:International Cricket Council - ICC",
+      "type" : "directory",
+      "title" : "International Cricket Council - ICC"
+   },
+   {
+      "did" : "teams:frc:Ford Ranger Cup - FRC",
+      "type" : "directory",
+      "title" : "Ford Ranger Cup - FRC"
+   },
+   {
+      "did" : "teams:hkcs:Hong Kong Cricket Sixes - HKCS",
+      "type" : "directory",
+      "title" : "Hong Kong Cricket Sixes - HKCS"
+   },
+   {
+      "did" : "teams:ipl:Indian Premier League - IPL",
+      "type" : "directory",
+      "title" : "Indian Premier League - IPL"
+   },
+   {
+      "did" : "teams:ranj:Ranji Trophy - RANJ",
+      "type" : "directory",
+      "title" : "Ranji Trophy - RANJ"
+   },
+   {
+      "did" : "teams:shef:Sheffield Shield - SHEF",
+      "type" : "directory",
+      "title" : "Sheffield Shield - SHEF"
+   }
+]

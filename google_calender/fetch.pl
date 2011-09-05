@@ -52,9 +52,9 @@ for ( @{ $category_json } ) {
 # write leagues/XXXXX.json
 mkdir 'leagues';
 for my $league_did ( keys %{ $leagues_json_hash } ) {
-    open my $LEAGUES_FH, '>', 'leagues/'.$league_did;
+    open my $LEAGUES_FH, '>', 'leagues/'.$league_did.'.json';
     print $LEAGUES_FH $json->encode( $leagues_json_hash->{$league_did} );
-    print $json->encode( $leagues_json_hash->{$league_did} );
+    # print $json->encode( $leagues_json_hash->{$league_did} );
 }
 
 
