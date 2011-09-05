@@ -1,0 +1,7 @@
+=head1 get google recommend calender info
+
+=head2 SYNOPSYS
+
+    $ perl get.pl sports
+    $ perl get.pl "teams:npb:Nippon Professional Baseball - NPB"
+

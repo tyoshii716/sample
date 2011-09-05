@@ -1,1 +1,4 @@
-=head1 TEST POD
+=head1 sample
+
+sample repos is gomi repos.
+push some my test files etc.
