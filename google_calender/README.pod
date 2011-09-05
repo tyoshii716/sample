@@ -1,7 +1,21 @@
-=head1 get google recommend calender info
+=head1 fetch google recommend calender
 
 =head2 SYNOPSYS
 
-    $ perl get.pl sports
-    $ perl get.pl "teams:npb:Nippon Professional Baseball - NPB"
+    $ perl fetch.pl
 
+    required modules
+        WWW::Mechanaize
+        JSON::XS
+
+=head2 DESCRIPTION
+
+create 'category/sports.json'
+create 'league/league:XXXXXXXX.json'
+
+Before execute, create .config.pl following:
+
+    return +{
+        Email => 'hogehoge@gmail.com',
+        Passwd => '**************',
+    };
