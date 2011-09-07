@@ -21,7 +21,8 @@ my $auth_info = do '.config.pl';
 ############
 # fetch url
 my $login_url = 'https://www.google.com/accounts/Login?hl=ja&continue=http://www.google.co.jp/';
-my $cal_url = 'https://www.google.com/calendar/directory?pli1&did=%s';
+my $dir_url = 'https://www.google.com/calendar/directory?pli1&did=%s';
+my $cal_url = 'https://www.google.com/calendar/htmlembed?epr=3&chrome=NAVIGATION&src=%s';
 
 ##########################
 # mechanize : google login
@@ -39,36 +40,98 @@ my $json = JSON::XS->new()->pretty(1)->allow_nonref();
 
 ################################
 # fetch each category calendar
-my $result = {
-    category => [
-        name => $category,
-    ],
-};
-fetch_calendar( $category, $result );
+my $res = fetch( { did => $category } );
 
 ########################
 # output result for YAML
-print Dump $result;
+print Dump { category => [ $res ] };
 
 
 ### METHOD
 
 ###################################
 # fetch specified category calendar
-sub fetch_calendar {
-    my $category = shift;
-    my $res = fetch_cal( $category );
+sub fetch {
+    my $did_ref = shift;
 
-    use Data::Dumper;
-    print Dumper $res;
-    exit;
+    # set temp hashref
+    my $name = shift;
+    my $key  = shift;
+    if ( $did_ref->{'did'} eq $category ) {
+        $name = $category;
+        $key  = 'event';
+    }
+    elsif ( $did_ref->{'did'} =~ m{^leagues:(.*)$} ) {
+        $name = $1;
+        $key  = 'league';
+    }
+    elsif ( $did_ref->{'did'} =~ m{^team} ) {
+        $did_ref->{'title'} =~ m{\s-\s(.*)$};
+        $name = $1 ? $1 : $did_ref->{'title'};
+        $key  = 'calendar';
+    }
+    else {
+        return '';
+    }
+
+    my $temp = { name => $name, $key => [] };
+
+    # fetch 
+    if ( $key eq 'calendar' ) {
+        use Data::Dumper;
+        my $res = fetch_dir( $did_ref->{'did'} );
+
+        for ( @$res ) {
+            my $html = fetch_cal( $_->{'did'} );
+    
+            $html =~ m{render\?cid=(.*?)%23sports};
+            push @{ $temp->{$key} }, url_decode( $1 );
+        }
+    }
+    else {
+        my $res = fetch_dir( $did_ref->{'did'} );
+        for ( @$res ) {
+            push @{ $temp->{$key} }, fetch( $_ );
+        }
+    }
+
+    $temp;
+}
+
+####################
+# fetch calendar api
+sub fetch_cal {
+    my $src = shift;
+    eval { $mech->get( sprintf $cal_url, $src ); };
+    if ( $@ ) {
+        warn $@;
+        return '';
+    }    
+
+    return $mech->content();
 }
 
 ##############################
-# fetch calendar/directory api
-sub fetch_cal {
+# fetch directory api
+sub fetch_dir {
     my $did = shift;
-    $mech->get( sprintf $cal_url, $did );
+
+    eval { $mech->get( sprintf $dir_url, $did ); };
+    if ( $@ ) {
+        warn $@;
+        return [];
+    }    
 
     return $json->decode( $mech->content() );    
+}
+
+############
+# url decode
+sub url_decode {
+    my $str = shift;
+    $str =~ tr/+/ /;
+    for ( 1 .. 2 ) {
+        $str =~ s/%([0-9A-Fa-f][0-9A-Fa-f])/pack('H2', $1)/eg;
+    }
+    return $str;
 }
