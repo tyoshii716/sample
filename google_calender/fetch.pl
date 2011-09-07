@@ -5,6 +5,14 @@ use warnings;
 
 use WWW::Mechanize;
 use JSON::XS;
+use YAML;
+local $YAML::UseHeader = 0;
+local $YAML::CompressSeries = 1;
+local $YAML::SortKeys = 0;
+
+############################################
+# get argument about fetch calendar category
+my $category = $ARGV[0] || 'sports';
 
 #################
 # Email && Passwd
@@ -30,39 +38,35 @@ $mech->submit_form(
 my $json = JSON::XS->new()->pretty(1)->allow_nonref();
 
 ################################
-# fetch sports category calendar
-my $category_json = fetch_calendar_directory( 'sports' );
-# print $json->encode( $category_json );
-
-############################
-# write category/sports.json
-mkdir 'category'; 
-open my $CATEGORY_FH, '>', 'category/sports.json';
-print $CATEGORY_FH $json->encode( $category_json );
-close $CATEGORY_FH;
+# fetch each category calendar
+my $result = {
+    category => [
+        name => $category,
+    ],
+};
+fetch_calendar( $category, $result );
 
 ########################
-# fetch leagues calendar
-my $leagues_json_hash;
-for ( @{ $category_json } ) {
-    $leagues_json_hash->{$_->{'did'}} = fetch_calendar_directory( $_->{'did'} );
-}
-
-##########################
-# write leagues/XXXXX.json
-mkdir 'leagues';
-for my $league_did ( keys %{ $leagues_json_hash } ) {
-    open my $LEAGUES_FH, '>', 'leagues/'.$league_did.'.json';
-    print $LEAGUES_FH $json->encode( $leagues_json_hash->{$league_did} );
-    # print $json->encode( $leagues_json_hash->{$league_did} );
-}
+# output result for YAML
+print Dump $result;
 
 
 ### METHOD
 
+###################################
+# fetch specified category calendar
+sub fetch_calendar {
+    my $category = shift;
+    my $res = fetch_cal( $category );
+
+    use Data::Dumper;
+    print Dumper $res;
+    exit;
+}
+
 ##############################
 # fetch calendar/directory api
-sub fetch_calendar_directory {
+sub fetch_cal {
     my $did = shift;
     $mech->get( sprintf $cal_url, $did );
 
