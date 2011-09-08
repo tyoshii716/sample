@@ -1,21 +1,30 @@
-=head1 fetch google recommend calender
+=head1 fetch google recommend calendar
 
 =head2 SYNOPSYS
 
-    $ perl fetch.pl
+    1. Install cpanm
 
-    required modules
-        WWW::Mechanaize
-        JSON::XS
+    2. Install required cpan module. following:
+        $ cpanm WWW::Mechanize
+        $ cpanm JSON::XS
+        $ cpanm YAML        
+
+    3. Set google account loging information.
+        $ cat .config.pl
+
+        return +{
+            Email  => 'hogehoge@mail.com',
+            Passwd => '**************',
+        };
+
+    4. Execute script
+        $ perl fetch.pl
 
 =head2 DESCRIPTION
 
-create 'category/sports.json'
-create 'league/league:XXXXXXXX.json'
+googleオススメカレンダーをfetchして、scraper for ruby が利用する、scrape_categories.yml形式で、情報を出力します。
 
-Before execute, create .config.pl following:
+現在、全てfetchするようになっていて、３０分ほど取得に時間がかかります。
+オプションをとれるように、変更することはできます。
 
-    return +{
-        Email => 'hogehoge@gmail.com',
-        Passwd => '**************',
-    };
+=cut
