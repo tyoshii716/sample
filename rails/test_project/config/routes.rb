@@ -1,4 +1,6 @@
 TestProject::Application.routes.draw do
+  resources :blogs
+
   get "main/hoge"
   get "main/hello"
 
