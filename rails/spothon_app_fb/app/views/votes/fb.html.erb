@@ -1,0 +1,79 @@
+<html>
+
+<style>
+div#promo {
+  display: none;
+}
+img.user {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+div#promo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+</style>
+
+<body>
+
+<div id="main">
+
+  <div id="q"></div>
+  <div id="left_q"></div>
+
+  <div id="user_left">
+    <a href="javascript:void(0);"><img class="user" src="http://a6.sphotos.ak.fbcdn.net/hphotos-ak-snc6/181726_104639412949264_100002096180152_40970_2787581_n.jpg">Toru Ikeda</a>
+  </div>
+  
+  <div id="user_right">
+    <a href="javascript:void(0);"><img class="user" src="http://photos-c.ak.fbcdn.net/hphotos-ak-snc3/23798_384265555613_695365613_4302188_3989780_a.jpg">sson</a>
+  </div>
+
+  <div id="promo">
+    <img src="http://a4.sphotos.ak.fbcdn.net/hphotos-ak-ash4/270182_229802617040763_227594617261563_806924_128531_n.jpg">
+  </div>
+</div>
+
+</body>
+</html>
+
+<script>
+
+$(document).ready(function(){
+
+  // question
+  var i = 0;
+  var q = [
+    '野球が得意なのはどっち？',
+    'どっちがサッカー好き？',
+    '野球でピッチャーをやらせたら上手いのは？',
+    'ズバリ！サッカー日本代表の監督にするならどっち？',
+    'どっちと一緒に野球みにいきたい？',
+  ];
+  function append_question() {
+    if ( q[i] ) {
+      $("div#q").text(q[i]);
+      $("div#left_q").text("あと" + ( 5 - i )+ "問");
+      i++;
+    }
+    else {
+      $("div#promo").fadeIn();
+    }
+  }
+
+  // user
+  $("img.user").click(function(){
+    $(this).animate({"top": "-=20px"}, 500)
+           .animate({"top": "+=20px"}, 500);
+    append_question();
+  });
+
+  // init
+  append_question();
+
+
+  
+});
+</script>
