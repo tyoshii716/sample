@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"
+xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-  <title>SpothonAppFb</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<title>spothon vote</title>
+<%= stylesheet_link_tag :all %>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="spothon vote" />
+<meta property="og:url" content="http://localhost:3000/votes" />
+<meta property="og:image" content="http://localhost:3000/images/hoge" />
+<meta property="fb:app_id" content="<%= Facebook::APP_ID %>" />
+<meta property="og:description" content="spothon vote" />
+<meta name="author" content="http://spothon.com" />
+<link rel="canonical" href="http://localhost:3000/votes" />
+<link rel="shortcut icon" href="http://localhost:3000/images/favicon.png" />
 </head>
 <body>
 
+login page
 <%= yield %>
 
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/ja_JP/all.js"></script>
+<script>
+  FB.init({
+    appId  : '<%= Facebook::APP_ID %>',
+    status : true,
+    cookie : true,
+    xfbml  : true
+  });
+  
+  <% if @facebook_cookies.nil? %>
+  function login(){
+    FB.login(function(response) {
+console.log(response);
+      if (response.session) {
+        location.href="http://localhost:3000/votes";
+      } else {
+        
+      }
+    }, {perms:'user_birthday'});
+  }
+login();
+  <% else %>
+  function feed(){
+   FB.ui(
+       {
+         method: 'feed',
+         name: 'spothon vote',
+         link: 'http://apps.facebook.com/spothon_vote/',
+         picture: 'http://localhost:3000/images/hoge',
+         message: '<%= yakudoshi_label %>',
+         description: '<%= @profile['name'] %>さんの友達でスポーツ王は誰だ！',
+         actions: {'name':'powered by spothon Inc', 'link':'http://spothon.com'}
+       });
+  }
+  <% end %>
+</script>
 </body>
 </html>

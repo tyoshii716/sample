@@ -1,17 +1,22 @@
 class VotesController < ApplicationController
-  # GET /votes/fb
-  def fb
-  end
 
+  before_filter :parse_facebook_cookies  
+
+  def parse_facebook_cookies
+    @facebook_cookies ||= Koala::Facebook::OAuth.new.get_user_info_from_cookie(cookies)
+  end
 
   # GET /votes
   # GET /votes.json
   def index
-    @votes = Vote.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @votes }
+      require "pp"
+      pp @facebook_cookies
+    
+    if @facebook_cookies.nil?
+      render :index
+    else
+
     end
   end
 
