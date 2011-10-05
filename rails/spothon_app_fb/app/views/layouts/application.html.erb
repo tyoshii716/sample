@@ -18,7 +18,6 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 </head>
 <body>
 
-login page
 <%= yield %>
 
 <div id="fb-root"></div>
@@ -40,7 +39,7 @@ console.log(response);
       } else {
         
       }
-    }, {perms:'user_birthday'});
+    }, {perms:'read_friendlists'});
   }
 login();
   <% else %>
@@ -51,8 +50,8 @@ login();
          name: 'spothon vote',
          link: 'http://apps.facebook.com/spothon_vote/',
          picture: 'http://localhost:3000/images/hoge',
-         message: '<%= yakudoshi_label %>',
-         description: '<%= @profile['name'] %>さんの友達でスポーツ王は誰だ！',
+         message: 'hogehoge',
+         description: 'あなたの友達でスポーツ王は誰だ！',
          actions: {'name':'powered by spothon Inc', 'link':'http://spothon.com'}
        });
   }
