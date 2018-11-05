@@ -3,7 +3,7 @@ services:
   app:
     image: "busybox:latest"
     volumes:
-      - .:/var/lib/php/irepe/irepe-future/
+      - .:/var/lib/php/tyoshii/sample
   php:
     build: ./docker/php
     volumes_from:
