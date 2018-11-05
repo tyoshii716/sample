@@ -6,12 +6,14 @@ services:
       - .:/var/lib/php/tyoshii/sample
   php:
     build: ./docker/php
+    image: sample-php
     volumes_from:
       - app
     ports:
       - 8081:80
   yarn:
     build: ./docker/yarn
+    image: sample-yarn
     volumes_from:
       - app
     ports:
