@@ -58,7 +58,6 @@ jobs:
       - run: cp .env.example .env
 
       - run: sleep 5
-      - run: docker-compose exec mysql service mysql status
       - run: docker-compose exec php php artisan migrate:refresh --seed
 
       # exec tests!
