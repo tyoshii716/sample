@@ -9,6 +9,8 @@ jobs:
     steps:
       - checkout
 
+      - setup_remote_docker
+
       # docker build
       - run:
           name: Build docker image
