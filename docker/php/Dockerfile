@@ -1,6 +1,6 @@
 FROM naqoda/centos-apache-php
 
-WORKDIR /var/lib/php/irepe/irepe-future
+WORKDIR /var/lib/php/tyoshii/sample
 
 # install yarn
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
