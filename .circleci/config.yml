@@ -5,37 +5,14 @@
 version: 2
 jobs:
   build:
-    machine:
-      image: circleci/classic:edge
+    machine: true
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - docker-{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml" }}
-          paths:
-            - ~/caches/images.tar
-      - run:
-          name: Setup docker
-          command: |
-            if [ ! -f ~/caches/images.tar ]; then
-              docker-compose build
-              mkdir -p ~/caches
-              docker save $(docker images | awk 'NR>=2 && ! /^<none>/{print $1}') -o ~/caches/images.tar
-            fi
-      - save_cache:
-          key: docker-{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml" }}
-          paths:
-            - ~/caches/images.tar
-
-      - run:
-          name: docker load
-          command: |
-            if [[ -e ~/caches/images.tar ]]; then
-              docker load -i ~/caches/images.tar
-            fi
-
       # docker build
+      - run:
+          name: build docker
+          command: docker-compose build
       - run:
           name: up docker
           command: docker-compose up -d
