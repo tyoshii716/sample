@@ -1,0 +1,22 @@
+name: repository-backup
+on:
+  schedule:
+    - cron: '0 0 1 * *' # UTCで、毎月1日の00:00に実行（JSTで言うと朝9時）
+  workflow_dispatch: # ブラウザからの手動実行も一応できるようにしておく。
+
+jobs:
+  main-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # リポジトリの全履歴を取得します。
+
+      - name: Archive Source
+        run: tar -czvf source.tar.gz .  # カレントディレクトリの内容をsource.tar.gzとしてアーカイブ
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: source-archive  # アーティファクトの名前
+          path: source.tar.gz  # アップロードするファイルのパス
