@@ -13,8 +13,11 @@ jobs:
         with:
           fetch-depth: 0  # リポジトリの全履歴を取得します。
 
-      - name: Archive Source
-        run: tar -czvf source.tar.gz --exclude=source.tar.gz . # カレントディレクトリの内容をsource.tar.gzとしてアーカイブ
+      - run: |
+          mkdir -p temp_dir  # 一時ディレクトリを作成
+          tar -czvf temp_dir/source.tar.gz --exclude=temp_dir .  # 一時ディレクトリにアーカイブを作成
+          mv temp_dir/source.tar.gz .  # アーカイブをカレントディレクトリに移動
+          rm -rf temp_dir  # 一時ディレクトリを削除
 
       - uses: actions/upload-artifact@v2
         with:
