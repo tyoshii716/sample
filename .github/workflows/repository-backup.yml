@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # リポジトリの全履歴を取得します。
 
@@ -19,7 +19,7 @@ jobs:
           mv temp_dir/source.tar.gz .  # アーカイブをカレントディレクトリに移動
           rm -rf temp_dir  # 一時ディレクトリを削除
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: source-archive  # アーティファクトの名前
           path: source.tar.gz  # アップロードするファイルのパス
