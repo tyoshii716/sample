@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0  # リポジトリの全履歴を取得します。
 
       - name: Archive Source
-        run: tar -czvf source.tar.gz .  # カレントディレクトリの内容をsource.tar.gzとしてアーカイブ
+        run: tar -czvf source.tar.gz . --exclude=.  # カレントディレクトリの内容をsource.tar.gzとしてアーカイブ
 
       - uses: actions/upload-artifact@v2
         with:
