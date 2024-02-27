@@ -15,7 +15,7 @@ jobs:
 
       - run: |
           YYYY_MM_DD=`date '+%Y-%m-%d'`
-          BACKUP_FILE="source-${YYYY_MM_DD}.tar.gz"
+          BACKUP_FILE="source-${YYYY_MM_DD}"
 
           mkdir -p temp_dir  # 一時ディレクトリを作成
           tar -czvf temp_dir/source.tar.gz --exclude=temp_dir .  # 一時ディレクトリにアーカイブを作成
