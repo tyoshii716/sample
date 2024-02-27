@@ -14,12 +14,16 @@ jobs:
           fetch-depth: 0  # リポジトリの全履歴を取得します。
 
       - run: |
+          YYYY_MM_DD=`date '+%Y-%m-%d'`
+          BACKUP_FILE="./source-${YYYY_MM_DD}.tar.gz"
+
           mkdir -p temp_dir  # 一時ディレクトリを作成
           tar -czvf temp_dir/source.tar.gz --exclude=temp_dir .  # 一時ディレクトリにアーカイブを作成
-          mv temp_dir/source.tar.gz .  # アーカイブをカレントディレクトリに移動
+          mv temp_dir/source.tar.gz ${BACKUP_FILE}  # アーカイブをカレントディレクトリに移動
           rm -rf temp_dir  # 一時ディレクトリを削除
 
+          echo "BACKUP_FILE=${BACKUP_FILE}" >> $GITHUB_ENV  # 環境変数にバックアップファイルのパスをセット
       - uses: actions/upload-artifact@v4
         with:
           name: source-archive  # アーティファクトの名前
-          path: source.tar.gz  # アップロードするファイルのパス
+          path: ${{ env.BACKUP_FILE }}  # アップロードするファイルのパス
